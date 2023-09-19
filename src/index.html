@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Kingdom Hearts 2 Archipelago Item Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+</head>
+
+<body>
+    <audio id="lEmblem">
+        <source src="audio/Enter.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bounty">
+        <source src="audio/bounty.ogg" type="audio/ogg">
+    </audio>
+    <table style="height: 97vh;">
+        <!-- Items Start-->
+        <tr>
+            <td style="height:45px; text-align: center;" colspan="2">
+                <table width="680px">
+                    <tr>
+                        <td id="jumpNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="highjump" style='opacity: 0.3' class="magic" src="img/movement/highjump.png">
+                        </td>
+                        <td id="runNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="quickrun" style='opacity: 0.3' class="magic" src="img/movement/quickrun.png">
+                        </td>
+                        <td id="dodgeNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="dodgeroll" style='opacity: 0.3' class="magic" src="img/movement/dodgeroll.png">
+                        </td>
+                        <td id="aerialNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="aerialdodge" style='opacity: 0.3' class="magic" src="img/movement/aerialdodge.png">
+                        </td>
+                        <td id="glideNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="glide" style='opacity: 0.3' class="magic" src="img/movement/glide.png">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:45px; text-align: center;" colspan="2">
+                <table>
+                    <tr>
+                        <td id="fireNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="fire" style='opacity: 0.3' class="magic" src="img/magic_fire.png">
+                        </td>
+                        <td id="blizzardNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="blizzard" style='opacity: 0.3' class="magic" src="img/magic_blizzard.png">
+                        </td>
+                        <td id="thunderNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="thunder" style='opacity: 0.3' class="magic" src="img/magic_thunder.png">
+                        </td>
+                        <td id="cureNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="cure" style='opacity: 0.3' class="magic" src="img/magic_cure.png">
+                        </td>
+                        <td id="reflectNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="reflect" style='opacity: 0.3' class="magic" src="img/magic_reflect.png">
+                        </td>
+                        <td id="magnetNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="magnet" style='opacity: 0.3' class="magic" src="img/magic_magnet.png">
+                        </td>
+                        <td id="pageNum" class="trackerNum">
+                            0
+                        </td>
+                        <td>
+                            <img id="tornpage" style='opacity: 0.3' class="magic" src="img/torn_pages.png">
+                        </td>
+                        <td id="emblemNum" class="trackerNum" style="width: 60px; text-align: right;">
+                            0
+                        </td>
+                        <td>
+                            <img id="emblem" style='opacity: 0.3' class="magic" src="img/emblem.png">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:45px; text-align: center;" colspan="2">
+                <table>
+                    <tr>
+                        <td>
+                            <img id='valor' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/form_valor.png">
+                        </td>
+                        <td>
+                            <img id='wisdom' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/form_wisdom.png">
+                        </td>
+                        <td>
+                            <img id='limit' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/form_limit.png">
+                        </td>
+                        <td>
+                            <img id='master' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/form_master.png">
+                        </td>
+                        <td>
+                            <img id='final' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/form_final.png">
+                        </td>
+                        <td>
+                            <img id='chickenlittle' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/summon_chicken_little.png">
+                        </td>
+                        <td>
+                            <img id='genie' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/summon_genie.png">
+                        </td>
+                        <td>
+                            <img id='stitch' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/summon_stitch.png">
+                        </td>
+                        <td>
+                            <img id='peterpan' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/summon_peter_pan.png">
+                        </td>
+                        <td>
+                            <img id='oncemore' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/once_more.png">
+                        </td>
+                        <td>
+                            <img id='secondchance' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/second_chance.png">
+                        </td>
+                        <td>
+                            <img id='connection' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/proof_connection.png">
+                        </td>
+                        <td>
+                            <img id='nonexistence' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/proof_nonexistence.png">
+                        </td>
+                        <td>
+                            <img id='peace' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/proof_peace.png">
+                        </td>
+                        <td>
+                            <img id='promisecharm' style='opacity: 0.3' style='opacity: 0.3' class="forms"
+                                src="img/promise_charm.png">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:45px; text-align: center;" colspan="2">
+                <table>
+                    <tr>
+                        <td id="beastNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='beastclaw' style='opacity: 0.3' class="unlocks" src="img/lock_beastclaw.png">
+                        </td>
+                        <td id="boneNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='bonefist' style='opacity: 0.3' class="unlocks" src="img/lock_bonefist.png">
+                        </td>
+                        <td id="proudNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='proudfang' style='opacity: 0.3' class="unlocks" src="img/lock_proudfang.png">
+                        </td>
+                        <td id="warNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='battlefieldsofwar' style='opacity: 0.3' class="unlocks"
+                                src="img/lock_battlefieldsofwar.png">
+                        </td>
+                        <td id="swordNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='ancestorsword' style='opacity: 0.3' class="unlocks"
+                                src="img/lock_ancestorsword.png">
+                        </td>
+                        <td id="skillNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='skillcrossbones' style='opacity: 0.3' class="unlocks"
+                                src="img/lock_skillcrossbones.png">
+                        </td>
+                        <td id="scimitarNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='scimitar' style='opacity: 0.3' class="unlocks" src="img/lock_scimitar.png">
+                        </td>
+                        <td id="diskNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='identitydisk' style='opacity: 0.3' class="unlocks" src="img/lock_identitydisk.png">
+                        </td>
+                        <td id="cardNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='membershipcard' style='opacity: 0.3' class="unlocks"
+                                src="img/lock_membershipcard.png">
+                        </td>
+                        <td id="sketchesNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='picture' style='opacity: 0.3' class="unlocks" src="img/lock_picture.png">
+                        </td>
+                        <td id="icecreamNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='icecream' style='opacity: 0.3' class="unlocks" src="img/lock_icecream.png">
+                        </td>
+                        <td id="castleNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='disneycastlekey' style='opacity: 0.3' class="unlocks"
+                                src="img/lock_disneycastlekey.png">
+                        </td>
+                        <td id="dawnNum" class="unlockNum">
+                            0
+                        </td>
+                        <td>
+                            <img id='waytothedawn' style='opacity: 0.3' class="unlocks" src="img/lock_waytothedawn.png">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--Items End-->
+        <!--Level Tracking Start-->
+        <tr>
+            <td colspan="2">
+                <table width="680px">
+                    <tr>
+                        <td>
+                            <div id="valorLvl" style="text-align: right;">0</div>
+                        </td>
+                        <td>
+                            <img src="img/form_valor.png" class="forms">
+                        </td>
+                        <td>
+                            <div id="wisdomLvl" style="text-align: right;">0</div>
+                        </td>
+                        <td>
+                            <img src="img/form_wisdom.png" class="forms">
+                        </td>
+                        <td>
+                            <div id="limitLvl" style="text-align: right;">0</div>
+                        </td>
+                        <td>
+                            <img src="img/form_limit.png" class="forms">
+                        </td>
+                        <td>
+                            <div id="masterLvl" style="text-align: right;">0</div>
+                        </td>
+                        <td>
+                            <img src="img/form_master.png" class="forms">
+                        </td>
+                        <td>
+                            <div id="finalLvl" style="text-align: right;">0</div>
+                        </td>
+                        <td>
+                            <img src="img/form_final.png" class="forms">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--Level Tracking End-->
+        <!--Worlds Start-->
+        <tr>
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td style="text-align: center; width: 100px">
+                            World
+                        </td>
+                        <td style="text-align: center; width: 30px" colspan="2">
+                            Locks Remaining
+                        </td>
+                        <td style="text-align: center; width: 100px">
+                            World
+                        </td>
+                        <td style="text-align: center; width: 30px" colspan="2">
+                            Locks Remaining
+                        </td>
+                        <td rowspan="8" style="vertical-align: top;">
+                            <div id='emblemTitle'>Required Emblems:</div>
+                            <div style="text-align: center;" id="emblemCount">0</div>
+                            <br>
+                            <div id='bountyTitle'>Required Bounties:</div>
+                            <div style="text-align: center;" id="bountyCount">0</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/stt.png">
+                        </td>
+                        <td id="sttCount" class="worldRem">
+                            1
+                        </td>
+                        <td>/ 1</td>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/tt.png">
+                        </td>
+                        <td id="ttCount" class="worldRem">
+                            3
+                        </td>
+                        <td>/ 3</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/hb.png">
+                        </td>
+                        <td id="hbCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/bc.png">
+                        </td>
+                        <td id="bcCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/oc.png">
+                        </td>
+                        <td id="ocCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/agra.png">
+                        </td>
+                        <td id="agraCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/lod.png">
+                        </td>
+                        <td id="lodCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/100a.png">
+                        </td>
+                        <td id="100aCount" class="worldRem">
+                            5
+                        </td>
+                        <td>/ 5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/pl.png">
+                        </td>
+                        <td id="plCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/dc.png">
+                        </td>
+                        <td id="dcCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/ht.png">
+                        </td>
+                        <td id="htCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/pr.png">
+                        </td>
+                        <td id="prCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/sp.png">
+                        </td>
+                        <td id="spCount" class="worldRem">
+                            2
+                        </td>
+                        <td>/ 2</td>
+                        <td>
+                            <img class="worldTracker" src="img/worlds/twtnw.png">
+                        </td>
+                        <td id="twtnwCount" class="worldRem">
+                            1
+                        </td>
+                        <td>/ 1</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--Worlds End-->
+        <tr>
+            <td style="vertical-align: bottom; width: calc(100% - 300px)">
+                <div id="log"></div>
+            </td>
+            <td style="text-align: center; vertical-align: bottom;">
+                <button class="connButton" onclick="save()">Save Form Levels</button>
+                <button class="connButton" onclick="load()">Load Form Levels</button>
+                <button class="connButton" onclick="disconnect()">Disconnect</button><br><br>
+                <select class="connButton" id="winCon" onchange="winCon()">
+                    <option value="Lucky">Lucky Emblems</option>
+                    <option value="Bounty">Bounty</option>
+                    <option value="Proof">Three Proofs</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <script>
+        document.getElementById('bountyTitle').style.display = 'none';
+        document.getElementById('bountyCount').style.display = 'none';
+
+        function winCon() {
+            var x = document.getElementById('winCon').value;
+            if (x == 'Lucky') {
+                document.getElementById('bountyTitle').style.display = 'none';
+                document.getElementById('bountyCount').style.display = 'none';
+                document.getElementById('emblemTitle').style.display = 'block';
+                document.getElementById('emblemCount').style.display = 'block';
+            }
+            if (x == 'Bounty') {
+                document.getElementById('bountyTitle').style.display = 'block';
+                document.getElementById('bountyCount').style.display = 'block';
+                document.getElementById('emblemTitle').style.display = 'none';
+                document.getElementById('emblemCount').style.display = 'none';
+            }
+            if (x == 'Proof') {
+                document.getElementById('emblemTitle').style.display = 'none';
+                document.getElementById('emblemCount').style.display = 'none';
+                document.getElementById('bountyTitle').style.display = 'none';
+                document.getElementById('bountyCount').style.display = 'none';
+            }
+        }
+
+        function save() {
+            localStorage.setItem('formLvl', [document.getElementById('valorLvl').innerHTML, document.getElementById('wisdomLvl').innerHTML, document.getElementById('limitLvl').innerHTML, document.getElementById('masterLvl').innerHTML, document.getElementById('finalLvl').innerHTML])
+        }
+
+        function load() {
+            var formLevels = localStorage.getItem('formLvl').split(',');
+            var formIDs = ['valorLvl', 'wisdomLvl', 'limitLvl', 'masterLvl', 'finalLvl']
+            for (i in formLevels) {
+                document.getElementById(formIDs[i]).innerHTML = formLevels[i];
+            }
+
+            if (document.getElementById('final').style.opacity != '1') {
+                if (formLevels[4] > 0) {
+                    markChecks("Final Form");
+                }
+            }
+        }
+
+        function disconnect() {
+            sessionStorage.setItem('host', "");
+            sessionStorage.setItem('port', '');
+            sessionStorage.setItem('game', '');
+            sessionStorage.setItem('player', '');
+
+            window.location.href = './server.html'
+        }
+    </script>
+    <script type="module">
+        import {
+            Client,
+            ITEMS_HANDLING_FLAGS,
+            SERVER_PACKET_TYPE,
+        } from "https://unpkg.com/archipelago.js@1.0.0/dist/archipelago.js";
+
+        // Create a new Archipelago client
+        const client = new Client();
+
+        const connectionInfo = {
+            hostname: sessionStorage.getItem('host'), // Replace with the actual AP server hostname.
+            port: parseInt(sessionStorage.getItem('port')), // Replace with the actual AP server port.
+            game: sessionStorage.getItem('game'), // Replace with the game name for this player.
+            name: sessionStorage.getItem('player'), // Replace with the player slot name.
+            items_handling: ITEMS_HANDLING_FLAGS.REMOTE_ALL,
+        };
+
+        // Set up event listeners
+        client.addListener(SERVER_PACKET_TYPE.CONNECTED, (packet) => {
+            console.log("Connected to server: ", packet);
+            document.getElementById('emblemCount').innerHTML = packet['slot_data']["LuckyEmblemsRequired"];
+            document.getElementById('bountyCount').innerHTML = packet['slot_data']["BountyRequired"];
+        });
+
+        var itemLog = [];
+
+        client.addListener(SERVER_PACKET_TYPE.RECEIVED_ITEMS, (packet) => {
+            console.log(packet.items)
+            var packetItems = packet.items;
+            var receivedItems = []
+
+            for (var i = 0; i < packetItems.length; i++) {
+                receivedItems.push(client.items.name("Kingdom Hearts 2", packetItems[i]['item']));
+            }
+
+            itemLog = receivedItems;
+
+            for (var j = 0; j < receivedItems.length; j++) {
+                markChecks(receivedItems[j]);
+            }
+        })
+
+        client.addListener(SERVER_PACKET_TYPE.PRINT_JSON, (packet, message) => {
+            var oldmsg = document.getElementById('log').innerHTML;
+            document.getElementById('log').innerHTML = "<li>" + message + "</li>" + oldmsg;
+
+            if (!itemLog.includes('Final Form')) {
+                if (message.indexOf('(Edge of Ultima Slot)') != -1) {
+                    if (message.indexOf(sessionStorage.getItem('player')) != -1) {
+                        markChecks("Final Form");
+                    }
+                }
+            }
+
+            var playerName = sessionStorage.getItem('player');
+
+
+            if (message.indexOf(playerName) == 0) {
+                if (message.indexOf('(Valor level') != -1) {
+                    document.getElementById('valorLvl').innerHTML = message.substring((message.indexOf('(Valor level') + 12), (message.indexOf('(Valor level') + 14));
+                }
+                if (message.indexOf('(Wisdom level') != -1) {
+                    document.getElementById('wisdomLvl').innerHTML = message.substring((message.indexOf('(Wisdom level') + 13), (message.indexOf('(Wisdom level') + 15));
+                }
+                if (message.indexOf('(Limit level') != -1) {
+                    document.getElementById('limitLvl').innerHTML = message.substring((message.indexOf('(Limit level') + 12), (message.indexOf('(Limit level') + 14));
+                }
+                if (message.indexOf('(Master level') != -1) {
+                    document.getElementById('masterLvl').innerHTML = message.substring((message.indexOf('(Master level') + 13), (message.indexOf('(Master level') + 15));
+                }
+                if (message.indexOf('(Final level') != -1) {
+                    document.getElementById('finalLvl').innerHTML = message.substring((message.indexOf('(Final level') + 12), (message.indexOf('(Final level') + 14));
+                }
+            }
+        });
+
+        // Connect to the Archipelago server
+        client
+            .connect(connectionInfo)
+            .then(() => {
+                console.log("Connected to the server");
+                // You are now connected and authenticated to the server. You can add more code here if need be.
+            })
+            .catch((error) => {
+                console.error("Failed to connect:", error);
+                // Handle the connection error.
+            });
+
+        // Disconnect from the server when unloading window.
+        window.addEventListener("beforeunload", () => {
+            client.disconnect();
+        });
+    </script>
+</body>
+
+</html>
