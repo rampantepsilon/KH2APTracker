@@ -33,13 +33,10 @@ const changelogOptions = {
     type: 'info',
     buttons: ['Close'],
     title: 'Changelog',
-    message: 'Changes to v1.0.0',
-    detail: `- Added Ability to track Lucky Emblems, Bounties, or none (for Proofs only)
-    - Changed Auto-tracker to behave like the AP Clients
-    - Added Sound Effects for Lucky Emblems and Bounties
-    - Fixed issue where Torn Pages weren't progressing world check
-    - Added Ability to track Form Levels
-    - Added Save/Load feature for Form Level Tracking
+    message: 'Changes to v1.0.1',
+    detail: `- Added Tooltips for World Unlocks
+    - Added Detailed Icons (Simple Enabled by Default)
+    - Added Background Image Toggle (Off by Default)
     
     Changes coming to v1.x.x
     - Level Tracking
