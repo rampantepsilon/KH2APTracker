@@ -1,10 +1,10 @@
 {
   "name": "kh2-ap-item-tracker",
-  "version": "1.0.0-dev",
+  "version": "1.0.1-dev",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "package-win64": "electron-packager ./ kh2-ap-tracker --overwrite --asar --platform=win32 --arch=x64 --icon=logo.ico --out=build --version-string.CompanyName=RampantEpsilon --version-string.ProductName=\"Kingdom Hearts 2 Archipelago Tracker\"",
+    "package-win64": "electron-packager ./ kh2-ap-tracker --overwrite --platform=win32 --arch=x64 --icon=logo.ico --out=build --version-string.CompanyName=RampantEpsilon --version-string.ProductName=\"Kingdom Hearts 2 Archipelago Tracker\"",
     "start": "electron ."
   },
   "author": "",
