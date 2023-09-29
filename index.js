@@ -40,7 +40,7 @@ const changelogOptions = {
     
     Changes coming to v1.x.x
     - Level Tracking
-    - Ability to change icons for checks`
+    - Sound Toggle`
 }
 
 //Function for Changelog
