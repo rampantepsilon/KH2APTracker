@@ -642,19 +642,19 @@
 
             if (message.indexOf(playerName) == 0) {
                 if (message.indexOf('(Valor level') != -1) {
-                    document.getElementById('valorLvl').innerHTML = message.substring((message.indexOf('(Valor level') + 12), (message.indexOf('(Valor level') + 14));
+                    document.getElementById('valorLvl').innerHTML = message.substring((message.indexOf('(Valor level') + 13), (message.indexOf('(Valor level') + 14));
                 }
                 if (message.indexOf('(Wisdom level') != -1) {
-                    document.getElementById('wisdomLvl').innerHTML = message.substring((message.indexOf('(Wisdom level') + 13), (message.indexOf('(Wisdom level') + 15));
+                    document.getElementById('wisdomLvl').innerHTML = message.substring((message.indexOf('(Wisdom level') + 14), (message.indexOf('(Wisdom level') + 15));
                 }
                 if (message.indexOf('(Limit level') != -1) {
-                    document.getElementById('limitLvl').innerHTML = message.substring((message.indexOf('(Limit level') + 12), (message.indexOf('(Limit level') + 14));
+                    document.getElementById('limitLvl').innerHTML = message.substring((message.indexOf('(Limit level') + 13), (message.indexOf('(Limit level') + 14));
                 }
                 if (message.indexOf('(Master level') != -1) {
-                    document.getElementById('masterLvl').innerHTML = message.substring((message.indexOf('(Master level') + 13), (message.indexOf('(Master level') + 15));
+                    document.getElementById('masterLvl').innerHTML = message.substring((message.indexOf('(Master level') + 14), (message.indexOf('(Master level') + 15));
                 }
                 if (message.indexOf('(Final level') != -1) {
-                    document.getElementById('finalLvl').innerHTML = message.substring((message.indexOf('(Final level') + 12), (message.indexOf('(Final level') + 14));
+                    document.getElementById('finalLvl').innerHTML = message.substring((message.indexOf('(Final level') + 13), (message.indexOf('(Final level') + 14));
                 }
             }
         });
