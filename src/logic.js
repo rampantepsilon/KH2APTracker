@@ -52,7 +52,9 @@ function markChecks(checkName) {
         case ("Lucky Emblem"):
             document.getElementById('emblemNum').innerHTML = parseInt(document.getElementById('emblemNum').innerHTML) + 1;
             document.getElementById('emblem').style.opacity = '1';
-            document.getElementById('lEmblem').play();
+            if (playSounds == 1) {
+                document.getElementById('lEmblem').play();
+            }
             break;
         case ("Valor Form"):
             document.getElementById('valor').style.opacity = '1';
@@ -173,7 +175,9 @@ function markChecks(checkName) {
             break;
         case ("Bounty"):
             document.getElementById('bountyCount').innerHTML = parseInt(document.getElementById('bountyCount').innerHTML) - 1;
-            document.getElementById('bounty').play();
+            if (playSounds == 1) {
+                document.getElementById('bounty').play();
+            }
             break;
     }
 }
